@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Non-Teaching Staff Data Form – Gujrat</title>
+<style>
+:root{--bg:#0e1116;--card:#171b22;--line:#2a313c;--tx:#e6e9ee;--mu:#8b95a5;--ac:#4cc2ff;--er:#ff6b6b;--ok:#3ddc97}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 'IBM Plex Sans','Segoe UI',Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:8px 0 2px}.sub{color:var(--mu);font-size:13px;margin-bottom:14px}
+fieldset{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 14px;padding:14px}
+legend{padding:0 8px;color:var(--ac);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{display:flex;flex-direction:column}.f.w{grid-column:1/-1}
+label{font-size:12px;color:var(--mu);margin-bottom:4px}label b{color:var(--er)}
+input,select,textarea{background:#0b0e13;color:var(--tx);border:1px solid var(--line);border-radius:7px;padding:10px;font:inherit;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+input:disabled,select:disabled{opacity:.45}
+.bad{border-color:var(--er)!important}.msg{color:var(--er);font-size:12px;min-height:0;margin-top:3px}
+.hint{color:var(--mu);font-size:11px;margin-top:3px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+button{border:0;border-radius:8px;padding:12px 18px;font:600 15px inherit;cursor:pointer}
+.p{background:var(--ac);color:#04121c;flex:1}.s{background:#242b36;color:var(--tx)}
+button:disabled{opacity:.5}
+#st{margin:12px 0;padding:10px;border-radius:8px;display:none}
+#st.ok{display:block;background:#12281f;color:var(--ok)}#st.er{display:block;background:#2b1517;color:var(--er)}
+.foot{color:var(--mu);font-size:12px;margin-top:14px}
+@media(max-width:600px){.g{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<h1>Non-Teaching Staff – Data Collection Form</h1>
+<div class="sub">District Gujrat · Fields marked <span style="color:var(--er)">*</span> are required</div>
+<form id="f" novalidate>
+<fieldset><legend>Posting</legend><div class="g">
+<div class="f"><label>Markaz <b>*</b></label><select id="MARKAZ" name="MARKAZ" required></select></div>
+<div class="f"><label>School Name <b>*</b></label><select id="SCHOOL" name="SCHOOL NAME" required disabled></select></div>
+<div class="f"><label>Designation <b>*</b></label><select id="DES" name="DESIGNATION" required></select></div>
+<div class="f"><label>BPS <b>*</b></label><select name="BPS" required></select></div>
+</div></fieldset>
+
+<fieldset><legend>Personal</legend><div class="g">
+<div class="f w"><label>Name of Non-Teaching Staff <b>*</b></label><input name="NAME OF NON TEACHING STAFF" required></div>
+<div class="f"><label>Father Name <b>*</b></label><input name="FATHER NAME" required></div>
+<div class="f"><label>Gender <b>*</b></label><select name="GENDER" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+<div class="f"><label>Date of Birth <b>*</b></label><input type="date" name="DATE OF BIRTH" required></div>
+<div class="f"><label>CNIC <b>*</b></label><input name="CNIC" id="CNIC" inputmode="numeric" placeholder="34201-1234567-1" maxlength="15" required></div>
+<div class="f"><label>Personnel Number <b>*</b></label><input name="PERSONNEL NUMBER" id="PN" inputmode="numeric" placeholder="8-digit number" maxlength="8" required></div>
+<div class="f"><label>Academic Qualification <b>*</b></label><input name="ACADEMIC QUALIFICATION" list="ql" required><datalist id="ql"><option>Middle</option><option>Matric</option><option>F.A / F.Sc</option><option>B.A / B.Sc</option><option>M.A / M.Sc</option></datalist></div>
+<div class="f"><label>Phone Number <b>*</b></label><input name="Phone Number" id="PH" inputmode="numeric" placeholder="0300-1234567" maxlength="12" required></div>
+<div class="f w"><label>Address <b>*</b></label><textarea name="ADDRESS" rows="2" required></textarea></div>
+</div></fieldset>
+
+<fieldset><legend>Service</legend><div class="g">
+<div class="f"><label>Status <b>*</b></label><select name="STATUS (REGULAR/CONTRACT)" id="STS" required><option value="">Select</option><option>Regular</option><option>Contract</option></select></div>
+<div class="f"><label>Date of Appointment <b>*</b></label><input type="date" name="DATE OF APPOINTMENT" required></div>
+<div class="f"><label>Date of Regularization</label><input type="date" name="DATE OF REGULARIZATION" id="REG"><div class="hint">Only if status is Regular</div></div>
+<div class="f"><label>Date of Joining Current School <b>*</b></label><input type="date" name="DATE OF JOINING CURRENT SCHOOL" required></div>
+<div class="f"><label>Date of Joining Current Scale <b>*</b></label><input type="date" name="DATE OF JOINING CURRENT SCALE" required></div>
+</div></fieldset>
+
+<fieldset><legend>Bank</legend><div class="g">
+<div class="f"><label>Bank Name <b>*</b></label><input name="BANK NAME" list="bk" required><datalist id="bk"><option>Bank of Punjab</option><option>National Bank of Pakistan</option><option>HBL</option><option>UBL</option><option>MCB</option><option>Allied Bank</option><option>Bank Alfalah</option><option>Meezan Bank</option></datalist></div>
+<div class="f"><label>IBAN Number <b>*</b></label><input name="IBAN NUMBER" id="IBAN" placeholder="PK00XXXX0000000000000000" maxlength="24" style="text-transform:uppercase" required><div class="hint">24 characters, starts with PK</div></div>
+</div></fieldset>
+
+<div id="st"></div>
+<div class="row"><button class="p" id="sub" type="submit">Submit</button><button class="s" type="button" id="csv">Download saved CSV</button></div>
+<div class="foot" id="foot"></div>
+</form></div>
+<script>
+// ===== SETTINGS: paste your Google Apps Script Web App URL here =====
+const SCRIPT_URL="";
+// ====================================================================
+const SCHOOLS={"AEO Office": ["AEO GUJRAT-1", "AEO GUJRAT-2", "AEO KUNJAH-1", "AEO KARIANWALA-1", "AEO DAULAT NAGAR-1", "AEO J.P.J-1", "AEO TANDA-1"], "D.N-1": ["GGES BORA", "GGES UGGO WAL", "GGCMS MEOWAL(PSRP)", "GMPS JHANS"], "D.N-2": ["GGES SARAI DHING", "GGES DHARAKARI", "GGES DUHMA MALIKA", "GGPS BHALASER"], "D.N-3": ["GGES BHAKREWALI(HIGH)", "GGES BOKAN", "GMPS SANGHRANA(PSRP)", "GGCMS DAULAT NAGAR", "GGPS TIBBI BUSA"], "GRT-1": ["GGES UDOWAL KHURD", "GGPS BOLAY", "GGPS GHAZI KHOKHAR", "GGES DURANI MODEL", "GGPS MC FEROZ ABAD", "GGPS MC NO. 1 CHOWK NAWAB SAHIB", "GGPS MC NO. 2 FATTU PURA", "GGPS MC QUTAB ABAD GUJRAT", "GGPS MC MEHMDA"], "GRT-2": ["GGCMS KUTHALA CHENAB", "GGPS NEW MODEL GUJRAT", "GGPS KALRA PUNWAN", "GGPS KANWAN WALI SARKAR", "GGPS LUND PUR", "GGPS GORALA", "GGPS JATTO WAKAL", "GGPS MC KALRA KHASA"], "GRT-3": ["GMPS TIBBA HAMAD SHAH", "GMPS KOT BELLA(PSRP)", "GGPS CHACHIAN(PSRP)", "GGPS DERA IMDAD SHAH"], "GRT-4": ["GGES JAMAL PUR SYEDAN", "GGES HUNJRA", "GGES BANTH", "GGES CHAK MANJOU", "GGPS MADINA NO.2"], "GRT-5": ["GGES TARA GHAR", "GGHS HARRIAWALA (High)", "GGES DHEERKAY KALAN", "GMPS DHEERKAY KHURD", "GGPS SHADIWAL SHARQI", "GGPS SHADIWAL ICHERKEY"], "GRT-6": ["GGES CHAK BHOLA", "GMPS GUJAR PUR", "GGPS KHARIAN WALI", "GGPS SULTAN ABAD"], "GRT-7": ["GGES PAKHOWAL", "GGES THAKHER KHOKHRAN", "GGES THATHA POUR", "GGPS CHAR(PSRP)"], "GRT-8": ["GGES MUND", "GGES SERVICE INDUSTRY", "GGPS DUDRAH GHARBI"], "J.P.J-1": ["GGCMES KASSOKI", "GGES KUNG BUDDHA", "GCMPS RASOOL PUR", "GGCMPS MOJOKI", "GGPS KULA CHOUR NO. 1", "GGPS NAI ABADI J.P.Jattan", "GGPS CPC NO. 2 JALALPUR JATTAN"], "J.P.J-2": ["GGES CHRISTIAN JALAL PUR JATTAN", "GGES RANEWAL SAYYADAN", "GGES NEW NOSHARA", "GGCMPS BHAGOWAL KHURD", "GGCMS KULA CHOUR NO.2", "GGPS KULA CHOUR NO. 2", "GMPS CHAK DHILO"], "J.P.J-3": ["GGES SHAHBAZ PUR", "GGPS MANDHALA", "GMPS RASIDA", "GMPS GILI WALA", "GGPS BABAY DA LAHORE"], "J.P.J-4": ["GMPS MOHALLA LANGRIAN", "GGES CHAK KALA"], "J.P.J-5": ["GGES THIMKA", "GGCMS ALAM GARH", "GGPS KHEWA", "GGPS CHANGAN WALI ARIAN(PSRP)", "GGPS MOH SADHU", "GMPS NAND PUR", "GGPS DHILLU SHARQI(PSRP)", "GGPS CPC NO. 1 JALAL PUR JATTAN"], "J.P.J-6": ["GMES CHODO WAL"], "KW-1": ["GGES BHOOCH", "GGES DHAMTHAL", "GGES RUPOWAL", "GMPS GHURAL"], "KW-3": ["GGES BHUNGRAN WALA", "GGCMS KALAS", "GMPS GHAIAN", "GGPS MAJRA SHAMALI", "GGPS DHUN(PSRP)"], "KW-4": ["GGES BHARWAL", "GGES GHEERERA", "GGPS JEENDAR KALAN(PSRP)"], "KJ-1": ["GGES CPC KUNJAH NO.2", "GGES KANG CHANAN", "GGES JAMO BOLA", "GGES KHANWALI", "GGES KOT MUTTA", "GGCMS KUNG SOHARI", "GGCMS CHAH MUGHLAN(PSRP)", "GGPS KUNJAH NO.3"], "KJ-2": ["GGHS DARIA KATHANA(High)", "GGCMES MUSA KATHANA", "GGES DHAROWAL", "GGES CHAKRIAN", "GGCMS GOLAKI", "GGMES KAHNA", "GMPS CHOKARA", "GMPS SADDOKI", "GGPS SHERO JEEDA(PSRP)", "GGES DALIA"], "KJ-3": ["GGES TALI SAHAB", "GGES QASIM ABAD (CHOHA MAL)", "GGES TARIKHA", "GGES KOT QUTAB DIN", "GGES KHONAN GHERBI", "GGCMS MAJRA SHAREEF", "GGCMS LADHA", "GMPS SHADIWAL POWER HOUSE", "GGPS CHAK QAZI(PSRP)"], "TA-1": ["GGES CHAK MIRAN", "GGPS HASSAN DHEENDA"], "TA-2": ["GGES SHAMPUR KHOKHRAN", "GGES KOTLY BAGHWAN", "GGPS KURRI SHARIF", "GMPS DHARIWAL"], "TA-3": ["GGES SAGGAR", "GMPS NAJAN"]}, DESIG=["BULAVI", "CL-IV", "SWEEPER", "NAIB QASID", "CHOWKIDAR", "SECURITY GUARD", "SCHOOL GUARD"];
+const $=id=>document.getElementById(id), form=$('f');
+const opt=(el,ph,list)=>{el.innerHTML='<option value="">'+ph+'</option>'+list.map(x=>`<option>${x}</option>`).join('')};
+const mk=Object.keys(SCHOOLS).sort((a,b)=>a==='AEO Office'?-1:b==='AEO Office'?1:a.localeCompare(b,undefined,{numeric:true}));
+opt($('MARKAZ'),'Select Markaz',mk);opt($('DES'),'Select Designation',DESIG);
+opt(form.elements['BPS'],'Select BPS',Array.from({length:5},(_,i)=>i+1));
+$('SCHOOL').innerHTML='<option value="">Select Markaz first</option>';
+$('MARKAZ').onchange=e=>{const s=$('SCHOOL');s.disabled=!e.target.value;opt(s,'Select School',(SCHOOLS[e.target.value]||[]).slice().sort())};
+$('CNIC').oninput=e=>{let d=e.target.value.replace(/\D/g,'').slice(0,13);e.target.value=d.length>12?d.replace(/(\d{5})(\d{7})(\d)/,'$1-$2-$3'):d.length>5?d.replace(/(\d{5})(\d+)/,'$1-$2'):d};
+$('PH').oninput=e=>{let d=e.target.value.replace(/\D/g,'').slice(0,11);e.target.value=d.length>4?d.slice(0,4)+'-'+d.slice(4):d};
+$('PN').oninput=e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,8);
+$('IBAN').oninput=e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'');
+$('STS').onchange=e=>{const r=$('REG');r.disabled=e.target.value!=='Regular';if(r.disabled)r.value=''};
+$('REG').disabled=true;
+const rules=[['CNIC',v=>/^\d{5}-\d{7}-\d$/.test(v),'Enter a valid 13-digit CNIC'],
+['PERSONNEL NUMBER',v=>/^\d{8}$/.test(v),'Must be exactly 8 digits'],
+['Phone Number',v=>/^03\d{2}-\d{7}$/.test(v),'Format: 03XX-XXXXXXX'],
+['IBAN NUMBER',v=>/^PK\d{2}[A-Z]{4}\d{16}$/.test(v),'Invalid IBAN (PK + 2 digits + 4 letters + 16 digits)']];
+function validate(){let ok=true,first=null;
+ form.querySelectorAll('.msg').forEach(m=>m.remove());
+ [...form.elements].forEach(el=>{if(!el.name)return;el.classList.remove('bad');let m='';
+  if(el.required&&!el.value.trim())m='Required';
+  const r=rules.find(x=>x[0]===el.name);if(!m&&r&&el.value&&!r[1](el.value))m=r[2];
+  if(el.name==='DATE OF BIRTH'&&el.value&&new Date(el.value)>new Date())m='Invalid date';
+  if(m){ok=false;el.classList.add('bad');first=first||el;const d=document.createElement('div');d.className='msg';d.textContent=m;el.parentNode.appendChild(d)}});
+ if(first)first.scrollIntoView({block:'center'});return ok}
+const KEY='nts_saved',get=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}};
+const put=a=>{try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}};
+const upd=()=>$('foot').textContent=get().length?`${get().length} record(s) saved on this device`:'';
+const say=(t,c)=>{const s=$('st');s.className=c;s.textContent=t};
+form.onsubmit=async e=>{e.preventDefault();if(!validate()){say('Please fix the highlighted fields.','er');return}
+ const d={};[...form.elements].forEach(el=>{if(el.name)d[el.name]=el.value.trim()});
+ d['SUBMITTED AT']=new Date().toISOString();
+ const b=$('sub');b.disabled=true;
+ if(!SCRIPT_URL){put([...get(),d]);say('Saved on this device (no Google Sheet linked yet). Use "Download saved CSV".','ok')}
+ else{try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)});say('Submitted successfully.','ok')}
+  catch(x){put([...get(),d]);say('No internet – saved on this device. Resubmit later or download CSV.','er')}}
+ b.disabled=false;upd();form.reset();$('SCHOOL').disabled=true;$('SCHOOL').innerHTML='<option value="">Select Markaz first</option>';$('REG').disabled=true;scrollTo(0,0)};
+$('csv').onclick=()=>{const a=get();if(!a.length){say('Nothing saved on this device.','er');return}
+ const h=Object.keys(a[0]),q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+ const t='\ufeff'+[h.map(q).join(','),...a.map(r=>h.map(k=>q(r[k])).join(','))].join('\r\n');
+ const l=document.createElement('a');l.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));l.download='non_teaching_staff.csv';l.click()};
+upd();
+</script></body></html>
